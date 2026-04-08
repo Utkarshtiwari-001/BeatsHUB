@@ -2,7 +2,7 @@
 
 BeatsHub is a modern and visually engaging music streaming website built with inspiration from platforms like Spotify. It allows users to explore, play, and enjoy music across various genres and categories.
 
-## 🚀 Features
+## 🚀 Features and Genres
 
 - 🎧 Stream songs across multiple genres
 - 🧠 Smart UI inspired by Netflix & Spotify
