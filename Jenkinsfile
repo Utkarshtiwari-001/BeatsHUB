@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/Utkarshtiwari-001/BeatsHUB.git'
+               git branch: 'main', url: 'https://github.com/Utkarshtiwari-001/BeatsHUB.git'
             }
         }
 
