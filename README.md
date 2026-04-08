@@ -16,7 +16,7 @@ BeatsHub is a modern and visually engaging music streaming website built with in
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** HTML, CSS, JavaScript,Docker
 - **Music Playback:** HTML5 `<audio>` API
 - **Design Style:** Netflix-style grid layout with interactive UI elements
 
