@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     environment {
-        CONTAINER_NAME = "static-site"
-        IMAGE_NAME = "static-site-img"
+        IMAGE_NAME = "static-site"
+        CONTAINER_NAME = "static-site-container"
     }
 
     stages {
 
-        stage('Clone') {
+        stage('Clone Code') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/Utkarshtiwari-001/BeatsHUB.git'
             }
         }
 
@@ -20,13 +20,16 @@ pipeline {
             }
         }
 
-        stage('Deploy Container') {
+        stage('Stop Old Container') {
             steps {
-                sh '''
-                docker stop $CONTAINER_NAME || true
-                docker rm $CONTAINER_NAME || true
-                docker run -d -p 80:80 --name $CONTAINER_NAME $IMAGE_NAME
-                '''
+                sh 'docker stop $CONTAINER_NAME || true'
+                sh 'docker rm $CONTAINER_NAME || true'
+            }
+        }
+
+        stage('Run New Container') {
+            steps {
+                sh 'docker run -d -p 80:80 --name $CONTAINER_NAME $IMAGE_NAME'
             }
         }
     }
